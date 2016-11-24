@@ -6,7 +6,7 @@ Prerequisite:
 
 1. you have [caffe](https://github.com/BVLC/caffe) installed in your pc.
 
-How to use:
+Compression step in **terminal**:
 
 1. export CAFFE_ROOT=\<your_caffe_path\>
 
