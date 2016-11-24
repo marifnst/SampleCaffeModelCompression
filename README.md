@@ -2,13 +2,13 @@
 
 This is a really simple code for compressing caffemodel (no algorithm and technique). This code only copy array from pre-trained mode to new model (not all layer).
 
-prerequisite:
+Prerequisite:
 
-1. you have understood about [caffe](https://github.com/BVLC/caffe).
+1. you have [caffe](https://github.com/BVLC/caffe) installed in your pc.
 
 How to use:
 
-1. export CAFFE_ROOT=<your_caffe_path>
+1. export CAFFE_ROOT=\<your_caffe_path\>
 
 2. python sample_compress.py --before_prototxt $CAFFE_ROOT/models/bvlc_alexnet/deploy.prototxt --after_prototxt $CAFFE_ROOT/models/bvlc_alexnet/deploy_compress.prototxt --net $CAFFE_ROOT/models/bvlc_alexnet/bvlc_alexnet_beforecaffemodel --output_path $CAFFE_ROOT/models/bvlc_alexnet/bvlc_alexnet_compressed.caffemodel
 
