@@ -12,7 +12,7 @@ How to use:
 
 2. python sample_compress.py --before_prototxt $CAFFE_ROOT/models/bvlc_alexnet/deploy.prototxt --after_prototxt $CAFFE_ROOT/models/bvlc_alexnet/deploy_compress.prototxt --net $CAFFE_ROOT/models/bvlc_alexnet/bvlc_alexnet_beforecaffemodel --output_path $CAFFE_ROOT/models/bvlc_alexnet/bvlc_alexnet_compressed.caffemodel
 
-thank you very much for all references below:
+Thank you very much for all references below:
 
 1. https://github.com/BVLC/caffe
 
