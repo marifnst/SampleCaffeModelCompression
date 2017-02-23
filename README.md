@@ -70,13 +70,10 @@ Size comparison:
 
 	cpchung:examples$ ls ../models/bvlc_alexnet/ -lrth
 \total 291M
--rw-rw-r-- 1 cpchung cpchung **233M** Aug 22  2014 bvlc_alexnet.caffemodel
--rw-rw-r-- 1 cpchung cpchung 5.3K Feb 22 22:18 train_val.prototxt
--rw-rw-r-- 1 cpchung cpchung  298 Feb 22 22:18 solver.prototxt
--rw-rw-r-- 1 cpchung cpchung 1.2K Feb 22 22:18 readme.md
--rw-rw-r-- 1 cpchung cpchung **3.6K** Feb 22 22:18 deploy.prototxt
--rw-rw-r-- 1 cpchung cpchung **3.9K** Feb 22 22:18 deploy_compress.prototxt
--rw-rw-r-- 1 cpchung cpchung  **59M** Feb 22 23:05 bvlc_alexnet_compressed.caffemodel
+-rw-rw-r-- 1 cpchung cpchung **233M** Aug 22  2014 bvlc_alexnet.caffemodel  
+-rw-rw-r-- 1 cpchung cpchung **3.6K** Feb 22 22:18 deploy.prototxt  
+-rw-rw-r-- 1 cpchung cpchung **3.9K** Feb 22 22:18 deploy_compress.prototxt  
+-rw-rw-r-- 1 cpchung cpchung  **59M** Feb 22 23:05 bvlc_alexnet_compressed.caffemodel  
 
 Thank you very much for all references below:
 
