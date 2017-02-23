@@ -69,7 +69,7 @@ Size comparison:
 ----------------
 
 	cpchung:examples$ ls ../models/bvlc_alexnet/ -lrth
-\total 291M
+\total 291M  
 -rw-rw-r-- 1 cpchung cpchung **233M** Aug 22  2014 bvlc_alexnet.caffemodel  
 -rw-rw-r-- 1 cpchung cpchung **3.6K** Feb 22 22:18 deploy.prototxt  
 -rw-rw-r-- 1 cpchung cpchung **3.9K** Feb 22 22:18 deploy_compress.prototxt  
