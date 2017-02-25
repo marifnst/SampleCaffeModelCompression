@@ -63,9 +63,12 @@ caffe.set_mode_cpu()
 # model_def = caffe_root + 'models/bvlc_reference_caffenet/deploy.prototxt'
 # model_weights = caffe_root + 'models/bvlc_reference_caffenet/bvlc_reference_caffenet.caffemodel'
 
-model_def = caffe_root + 'models/bvlc_alexnet/deploy.prototxt'
-model_weights = caffe_root + 'models/bvlc_alexnet/bvlc_alexnet.caffemodel'
+# model_def = caffe_root + 'models/bvlc_alexnet/deploy.prototxt'
+# model_weights = caffe_root + 'models/bvlc_alexnet/bvlc_alexnet.caffemodel'
 
+temp='/home/cpchung/Downloads/vgg_face_caffe/'
+model_def = temp + 'VGG_FACE_deploy.prototxt'
+model_weights = temp + 'VGG_FACE.caffemodel'
 
 # model_def = caffe_root + 'models/bvlc_alexnet/deploy_compress.prototxt'
 # model_weights = caffe_root + 'models/bvlc_alexnet/bvlc_alexnet_compressed.caffemodel'
@@ -106,16 +109,23 @@ transformer.set_channel_swap('data', (2,1,0))  # swap channels from RGB to BGR
 
 # set the size of the input (we can skip this if we're happy
 #  with the default; we can also change it later, e.g., for different batch sizes)
+# net.blobs['data'].reshape(50,        # batch size
+#                           3,         # 3-channel (BGR) images
+#                           227, 227)  # image size is 227x227
+
 net.blobs['data'].reshape(50,        # batch size
                           3,         # 3-channel (BGR) images
-                          227, 227)  # image size is 227x227
+                          224, 224)  # image size is 227x227
 
 
 # * Load an image (that comes with Caffe) and perform the preprocessing we've set up.
 
 # In[7]:
 
-image = caffe.io.load_image(caffe_root + 'examples/images/cat.jpg')
+# image = caffe.io.load_image(caffe_root + 'examples/images/cat.jpg')
+image = caffe.io.load_image(caffe_root + 'examples/images/fish-bike.jpg')
+
+
 transformed_image = transformer.preprocess('data', image)
 plt.imshow(image)
 
@@ -158,7 +168,12 @@ print 'output label:', labels[output_prob.argmax()]
 top_inds = output_prob.argsort()[::-1][:5]  # reverse sort and take five largest items
 
 print 'probabilities and labels:'
-zip(output_prob[top_inds], labels[top_inds])
+# print output_prob[top_inds], labels[top_inds]
+print top_inds
+# print output_prob
+# print labels
+
+# zip(output_prob[top_inds], labels[top_inds])
 
 
 # * We see that less confident predictions are sensible.
@@ -316,4 +331,3 @@ zip(output_prob[top_inds], labels[top_inds])
 
 # print 'probabilities and labels:'
 # zip(output_prob[top_inds], labels[top_inds])
-
