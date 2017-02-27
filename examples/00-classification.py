@@ -169,9 +169,21 @@ top_inds = output_prob.argsort()[::-1][:5]  # reverse sort and take five largest
 
 print 'probabilities and labels:'
 # print output_prob[top_inds], labels[top_inds]
-print top_inds
-# print output_prob
-# print labels
+print  type(top_inds)
+print type(output_prob)
+print labels
+
+np.savetxt('top_inds.txt', top_inds)
+np.savetxt('output_prob.txt', output_prob)
+# np.savetxt('labels.txt', labels)
+
+
+import json
+# with open('output_prob.txt', 'w') as f:
+#     json.dump(output_prob, f)
+
+# with open('labels.txt', 'w') as g:
+#     json.dump(labels, g)
 
 # zip(output_prob[top_inds], labels[top_inds])
 
