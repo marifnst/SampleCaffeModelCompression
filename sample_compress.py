@@ -4,9 +4,9 @@
 
 import os, sys
 import argparse
+import caffe
 
 sys.path.insert(0, 'python')
-import caffe
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Sample CaffeModel Compression')
